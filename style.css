@@ -2,80 +2,147 @@
 body {
 padding: 0;
 margin: 0;
-font-family: Arial, sans-serif;
+font-family: 'Lato', sans-serif;
 }
 
+/*--------------------------------------- text */
+
+html {
+  font-size: 15px;
+}
+
+h1 {
+	font-size: 2.9em;
+	font-family: 'Merriweather', serif;
+    display: block;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+  color: ccc;
+  font-family: 'Roboto', sans-serif;
+  padding:25px 5% 5px 5%;
+}
 /*--------------------------------------- Header structure */
 .menutop {
     background-color: #333;
+	height:44px;
+	display:block;
+	position:static;
 }
 
-.menutop .logo {
-color:#000;
-display:inline-block;
-background-color:#fff;
-padding:8px 15px;
-width:auto;
+/* LOGO etc */
+
+.logo {
+  vertical-align:middle;
+  display:block;
+  float:left;
+  background-color:#fff;
+  height:44px;
+  overflow:hidden;
+	-webkit-box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.8);
+	-moz-box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.8);
+	box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.8);
 }
 
+.logo-font {
+	color:#000;
+	font-size: 1rem;
+    font-weight: 900;
+    font-family: 'Merriweather', serif;
+    text-decoration: none;
+    text-align: center;
+	vertical-align:middle;
+	padding:0 15px;
+}
+
+/*--------------------------------------- nawigacja */
 .odnosniki {
-float:right;
-display:block;
-position:relative;
+
+display:flex;
 background-color:#ff9900;
+float:right;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
     overflow: hidden;
+	margin:0;
 }
 
 li {
-    float: right;
+    float: left;
+	text-align:center;
+		height:43px
 }
 
 li a {
-    display: block;
+    display: inline-block;
     color: #fff;
     text-align: center;
-    padding: 8px 16px;
+    padding: 12px 16px;
     text-decoration: none;
-width:auto;
+    border-left: 1px solid #ff8c3f;
+    border-right: 1px solid #ff9f5f;
 }
 
 li a:hover {
-    background-color: #111;
+	display: block;
+    background-color: #000;
+	border-bottom:1px solid #ccc;
+	-webkit-box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.2);
+	-moz-box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.2);
+	box-shadow: 0px 0px 20px -8px rgba(71,71,71,0.2);
 }
 
-/*--------------------------------------- Search field */
+/*--------------------------------------- Search field & text fields*/
+
+input, textarea, keygen, select, button {
+	-webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+    text-rendering: auto;
+    color: initial;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: start;
+    margin: 5px 5px;
+    font: 15px;
+	padding:6px 15px 6px 15px;
+	width: auto;
+	border-radius:3px;
+	border: 2px inset #f5f5f5;
+	width:90%;
+	vertical-align: middle;
+}
 
 .search-field {
-float:right;
-position:baseline;
-background-color:#ccc;
-padding:7px 15px 6px 15px;
-}
-
-.input[type=text] {
-    width: 100%;
-    -webkit-transition: width 0.8s ease-in-out;
-    transition: width 0.8s ease-in-out;
-}
-
-input[type=text]:focus {
-    width: 98%;
+	float:right;
+	position:relative;
+	background-color:#ccc;
+	height: 44px;
+	overflow: hidden;
+	clear:right;
 }
 
 /*--------------------------------------------------------------------- MEDIAQUERIES */
 
-
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 632px) {
 /* mobile - max 600px for now*/
 
 .odnosniki {
 width:100%;
+}
+li a{
+	text-align:center;
 }
 
 .search-field{
@@ -85,10 +152,31 @@ display:block;
 text-align:center;
 -webkit-transition: width 0.8s ease-in-out;
 transition: width 0.8s ease-in-out;
+padding-top:5px;
+margin:0px;
 }
 
-.menutop .logo {
-display:flex;
+.logo {
+display:block;
 margin:0;
-width:auto;
+width:100%;
+text-align:center;
+}
+
+/*--------------------------------------------------------------------- Content type */
+
+.content{
+max-width: 1080px;
+    display: block;
+    margin: auto;
+}
+}
+.cfull {
+	max-width:1080px;
+	margin:auto;
+}
+
+.section-header{
+	background-color:#f5f5f5;
+	padding:50px;
 }
