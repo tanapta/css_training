@@ -1,0 +1,94 @@
+/*--------------------------------------- Basic */
+body {
+padding: 0;
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/*--------------------------------------- Header structure */
+.menutop {
+    background-color: #333;
+}
+
+.menutop .logo {
+color:#000;
+display:inline-block;
+background-color:#fff;
+padding:8px 15px;
+width:auto;
+}
+
+.odnosniki {
+float:right;
+display:block;
+position:relative;
+background-color:#ff9900;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: #fff;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+width:auto;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+/*--------------------------------------- Search field */
+
+.search-field {
+float:right;
+position:baseline;
+background-color:#ccc;
+padding:7px 15px 6px 15px;
+}
+
+.input[type=text] {
+    width: 100%;
+    -webkit-transition: width 0.8s ease-in-out;
+    transition: width 0.8s ease-in-out;
+}
+
+input[type=text]:focus {
+    width: 98%;
+}
+
+/*--------------------------------------------------------------------- MEDIAQUERIES */
+
+
+@media only screen and (max-width: 600px) {
+/* mobile - max 600px for now*/
+
+.odnosniki {
+width:100%;
+}
+
+.search-field{
+float:none;
+clear:both;
+display:block;
+text-align:center;
+-webkit-transition: width 0.8s ease-in-out;
+transition: width 0.8s ease-in-out;
+}
+
+.menutop .logo {
+display:flex;
+margin:0;
+width:auto;
+}
